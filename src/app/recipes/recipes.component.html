@@ -1,0 +1,19 @@
+<router-outlet></router-outlet>
+<div>
+  <p>Search recipe by name:</p>
+  <input type="text" [(ngModel)]="searchTerm"/>
+  <button  (click)="clearSearchTerm()">Clear</button>
+  <app-recipe-element *ngFor="let recipe of filterRecipes() " [name]="recipe.name" [description]="recipe.description" [imagePath]="recipe.imagePath"></app-recipe-element>
+
+</div>
+
+<app-recipe-element *ngFor="let recipe of recipes | paginate:{ itemsPerPage: 1, currentPage: p }" [name]="recipe.name" [description]="recipe.description" [imagePath]="recipe.imagePath"></app-recipe-element>
+<div *ngFor="let recipe of recipes | paginate:
+ { itemsPerPage: 1, currentPage: p }" >
+
+  <hr>
+</div>
+<pagination-controls
+  (pageChange)="p = $event"
+  class="float-right">
+</pagination-controls>

@@ -1,0 +1,29 @@
+body {
+  background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Ffood-background&psig=AOvVaw1nU82DWAH98nhGevqh_igK&ust=1680704144530000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKDdsP-0kP4CFQAAAAAdAAAAABAg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.image {
+  display: inline-block;
+  margin: 20px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 30px 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
