@@ -12,6 +12,8 @@ import {NgxPaginationModule} from "ngx-pagination";
 import { HttpClientModule} from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from'@angular/forms';
+import { RecipeFilterPipe } from './pipes/recipe-filter-pipe.pipe';
+import { ColorOfButtonDirective } from './directives/color-of-button.directive';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { FormsModule } from'@angular/forms';
     NavbarComponent,
     RecipeElementComponent,
     SavedRecipesComponent,
-    FooterComponent
+    FooterComponent,
+    RecipeFilterPipe,
+    ColorOfButtonDirective
   ],
   imports: [
     BrowserModule,

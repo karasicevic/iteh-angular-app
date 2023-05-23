@@ -1,13 +1,16 @@
 body {
-  background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Ffood-background&psig=AOvVaw1nU82DWAH98nhGevqh_igK&ust=1680704144530000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKDdsP-0kP4CFQAAAAAdAAAAABAg');
+  background-image: url(../../assets/images/back1.png);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .container {
-  width: 80%;
   margin: auto;
   text-align: center;
+  height: 100%;
+  width: 100%;
 }
 
 .image {
