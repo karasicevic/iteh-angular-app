@@ -1,5 +1,11 @@
+<router-outlet></router-outlet>
 
+<div>
+  <app-recipe-element *ngFor="let recipe of savedRecipesM() | paginate:{ itemsPerPage: 4, currentPage: p } "  [recipe]="recipe" ></app-recipe-element>
+</div>
 
-  <app-recipe-element *ngFor="let recipe of recipes " [name]="recipe.name" [description]="recipe.description" [imagePath]="recipe.imagePath"></app-recipe-element>
-
+<pagination-controls
+  (pageChange)="p = $event"
+  class="float-right">
+</pagination-controls>
 

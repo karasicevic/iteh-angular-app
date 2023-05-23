@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Recipe} from "../recipe.model";
 import {RecipeService} from "../recipe.service";
 
@@ -7,13 +7,17 @@ import {RecipeService} from "../recipe.service";
   templateUrl: './saved-recipes.component.html',
   styleUrls: ['./saved-recipes.component.css']
 })
-export class SavedRecipesComponent {
-  recipes: Recipe[];
-  isEmpty=true;
-  constructor(private recipeService: RecipeService) {
-    this.recipes = this.recipeService.getSavedRecipes();
-    if (this.recipes.length>0){
-      this.isEmpty=false;
+export class SavedRecipesComponent{
+  savedRecipes: Recipe[]=[new Recipe(2, 'Fried egg bread', 'Bread, Eggs, Milk, Salt, Oil',"../../assets/images/i2.jpg", false)];
+
+
+    constructor(private recipeService: RecipeService) {
+      this.savedRecipes = this.recipeService.getSavedRecipes();
     }
+
+
+  savedRecipesM() {
+    return this.savedRecipes;
   }
+p:any;
 }

@@ -1,25 +1,32 @@
+<body>
 <div class="container" style="margin-top: 12px;">
   <div class="card">
     <header class="card-header">
       <h1 class="card-header-title">
-        {{name}}
+        {{recipe.name}}
       </h1>
     </header>
 
     <div class="card-content">
       <p class="content">
-        {{description}}
+        {{recipe.description}}
       </p>
       <img
-      [src]="imagePath"
+      [src]="recipe.imagePath"
       alt="picture"
       width="150%"
       height="150%"
       class="image"
-    />
-      <button class>
-        Save
+      />
+      <button class="button" [disabled]="isButtonDisabled" (click)="onSave(recipe)">
+          <span *ngIf="!recipe.isSaved">
+            <i class="far fa-heart"></i> Save
+          </span>
+          <span *ngIf="recipe.isSaved">
+            <i class="fas fa-heart"></i> Saved
+          </span>
       </button>
     </div>
   </div>
 </div>
+</body>

@@ -19,6 +19,7 @@ img {
   height: auto;
   display: block;
   margin-bottom: 20px;
+  border-radius: 8px;
 }
 card {
   background-color: #fff;
@@ -36,7 +37,9 @@ content {
   line-height: 1.5;
   margin-bottom: 16px;
 }
-
+body {
+  background-color: lightblue;
+}
 
 
 

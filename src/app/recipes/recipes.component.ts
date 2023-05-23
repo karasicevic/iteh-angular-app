@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
  import { Recipe } from '../recipe.model';
  import { RecipeService } from '../recipe.service';
+import {SavedRecipesComponent} from "../saved-recipes/saved-recipes.component";
 
 @Component({
   selector: 'app-recipes',
@@ -32,8 +33,10 @@ export class RecipesComponent implements OnInit{
     //   }
     // );
  }
+
   clearSearchTerm():void{
      this.searchTerm="";
+
   }
   filterRecipes(): Recipe[] {
     if (!this.searchTerm.trim()) {
