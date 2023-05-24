@@ -12,10 +12,10 @@
         {{recipe.description}}
       </p>
       <img
-      [src]="recipe.imagePath"
+        src="{{ recipe.imagePath }}"
       alt="picture"
-      width="150%"
-      height="150%"
+      width="50%"
+      height="50%"
       class="image"
       />
       <button class="button" [disabled]="isButtonDisabled" (click)="onSave(recipe)">
